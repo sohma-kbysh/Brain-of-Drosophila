@@ -1,0 +1,118 @@
+{
+  "document_type": "strategic_execution_plan",
+  "schema_version": 1,
+  "created_date": "2026-09-12",
+  "status": "partially_executed",
+  "latest_execution_report": "../docs/operational_gpt/resource_experiment_v1_results.md",
+  "latest_execution_scope": "1E_and_initial_2A_common_random_search_control",
+  "latest_execution_trials": 29328000,
+  "gpt_vs_task_only_vs_psr_comparison_executed": false,
+  "executable_by_existing_runner": false,
+  "plan_document": "../docs/operational_gpt/nonclassical_resource_execution_plan.md",
+  "primary_question": "GPT-guided efficient generation and use of effective nonclassical computational resources in biological circuits",
+  "primary_benchmark": {
+    "name": "two_bit_delayed_choice_with_parity_audit",
+    "preparation_labels": ["00", "01", "10", "11"],
+    "query_indices": [1, 2],
+    "query_chosen_after_preparation_and_operations": true,
+    "copies_per_logical_use": 1,
+    "preparation_label_available_to_decoder": false,
+    "noncontextual_pom_reference": 0.75,
+    "reference_requires_declared_equivalences_or_relaxation": true,
+    "operational_leakage_is_not_ontic_tv_bound": true,
+    "ontic_tv_sensitivity_grid": [0, 0.05, 0.1, 0.2, 1],
+    "target_single_copy_success_lower": 0.8,
+    "target_finite_interface_parity_gap_upper": 0.02,
+    "gate_generators": ["flip_first_bit", "swap_bits"],
+    "audit_all_gate_words_up_to_length": 4,
+    "target_length_four_mean_success_lower": 0.8,
+    "target_length_four_each_word_success_lower": 0.77,
+    "target_composition_error_upper": 0.05,
+    "target_dt_probability_difference_upper": 0.01
+  },
+  "next_stage": "2A_neural_resource_generation_and_operations",
+  "stages": [
+    "1E_benchmark_and_cost_ledger",
+    "2A_neural_resource_generation_and_operations",
+    "2B_measured_connectome_instantiation",
+    "3_independent_efficiency_confirmation",
+    "4_scaling_and_biological_validation"
+  ],
+  "neural_discovery_campaign": {
+    "neuron_counts": [2, 8, 16],
+    "design_methods": ["gpt_guided", "task_only", "ordinary_psr"],
+    "independent_search_seeds_per_condition": 5,
+    "max_candidate_proposals_per_run": 64,
+    "initial_shots_per_cell": 200,
+    "candidate_reevaluation_shots_per_cell": 2000,
+    "max_total_physical_trials_per_run": 500000,
+    "max_runs": 45,
+    "max_total_physical_trials": 22500000,
+    "cost_cap_includes_auxiliary_probes_and_failed_candidates": true
+  },
+  "confirmation": {
+    "initial_planning_shots_per_cell": 20000,
+    "max_shots_per_cell": 200000,
+    "max_total_physical_trials_per_campaign_all_methods": 50000000,
+    "primary_familywise_alpha": 0.05,
+    "exact_sample_size_and_alpha_allocation_locked_before_confirmation": true,
+    "unplanned_optional_stopping": false,
+    "reuse_previous_phase1d_test_as_confirmation": false
+  },
+  "connectome_initial_target": {
+    "approximately_neuron_counts": [16, 32, 64],
+    "measured_subcircuits_per_size": 1,
+    "matched_random_controls_per_subcircuit": 5,
+    "design_methods": ["gpt_guided", "task_only", "ordinary_psr"],
+    "independent_search_seeds_per_condition": 1,
+    "max_runs": 54,
+    "max_candidate_proposals_per_run": 64,
+    "max_total_physical_trials_per_run": 400000,
+    "max_total_physical_trials": 21600000,
+    "synthetic_fallback_allowed": false,
+    "freeze_provenance_and_selection_before_functional_search": true,
+    "biological_claim_without_live_measurements": "measured_connectome_constrained_model_only"
+  },
+  "efficiency": {
+    "include_design_calibration_reset_encoding_operations_readout_retries": true,
+    "include_external_controller_and_hidden_storage": true,
+    "amortization_uses": [1, 1000, 1000000],
+    "initial_primary_cost_reduction_target": 0.2,
+    "max_other_primary_cost_increase_target": 0.1,
+    "primary_cost_unit_must_be_locked_before_confirmation": true,
+    "spikes_are_not_joules": true,
+    "simulation_runtime_is_not_biological_energy": true
+  },
+  "required_controls": [
+    "optimal_noncontextual_pom_reference",
+    "one_classical_bit_rac",
+    "two_classical_bit_shadow_with_operations_and_costs",
+    "unrestricted_two_classical_bit_implementation",
+    "task_only_neural_design",
+    "ordinary_psr_design",
+    "finite_state_or_reservoir_implementation",
+    "matched_random_connectome",
+    "parity_readout_and_repeated_readout_interface_audit"
+  ],
+  "not_required_to_start_resource_experiments": [
+    "exact_global_gpt_axioms",
+    "proof_of_rtc_relative_to_unknown_parent",
+    "general_gpt_cone_solver"
+  ],
+  "must_freeze_before_discovery": [
+    "input_sites_rates_windows_and_physiological_parameter_bounds",
+    "readout_family_and_available_raw_observations",
+    "controller_information_access",
+    "optimizer_settings_and_budget_allocation",
+    "actual_seed_registry"
+  ],
+  "must_freeze_before_confirmation": [
+    "selected_candidates_and_all_model_parameters",
+    "physical_secondary_procedure_mixture_weights_if_used",
+    "complete_finite_interface_and_operation_sequences",
+    "reference_assumptions_and_relaxations",
+    "exact_sample_sizes_and_independent_run_counts",
+    "alpha_allocation_and_primary_cost_unit",
+    "stress_conditions_and_test_seed_registry"
+  ]
+}

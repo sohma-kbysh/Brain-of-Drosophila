@@ -1,0 +1,660 @@
+{
+  "storage_windows": [
+    {
+      "T2": 4e-09,
+      "status": "proxy",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 8.010010673170025e-12,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 1e-08,
+      "status": "proxy",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.0025026682925062e-11,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 1e-07,
+      "status": "proxy",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.002502668292506e-10,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 1e-06,
+      "status": "measured",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.0025026682925062e-09,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 1e-05,
+      "status": "measured",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.0025026682925062e-08,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 0.0001,
+      "status": "speculative",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.0025026682925062e-07,
+      "ber_at_1_T2": 0.3160602794142788
+    },
+    {
+      "T2": 0.001,
+      "status": "speculative",
+      "window_over_T2": 0.002002502668292506,
+      "window_seconds": 2.002502668292506e-06,
+      "ber_at_1_T2": 0.3160602794142788
+    }
+  ],
+  "attacks": [
+    {
+      "protocol": "masked_conjugate",
+      "attack": "breidbart",
+      "eve_before_key": 0.5,
+      "eve_after_key": 0.8535533905932737,
+      "bob_disturbance": 0.25
+    },
+    {
+      "protocol": "masked_conjugate",
+      "attack": "none",
+      "eve_before_key": 0.5,
+      "eve_after_key": 0.5,
+      "bob_disturbance": 0.0
+    },
+    {
+      "protocol": "masked_conjugate",
+      "attack": "random_basis_intercept_resend",
+      "eve_before_key": 0.5,
+      "eve_after_key": 0.75,
+      "bob_disturbance": 0.25
+    },
+    {
+      "protocol": "masked_conjugate",
+      "attack": "swap_theft",
+      "eve_before_key": 0.5,
+      "eve_after_key": 1.0,
+      "bob_disturbance": 0.453125
+    },
+    {
+      "protocol": "masked_conjugate",
+      "attack": "z_intercept_resend",
+      "eve_before_key": 0.5,
+      "eve_after_key": 0.671875,
+      "bob_disturbance": 0.328125
+    },
+    {
+      "protocol": "raw_bb84",
+      "attack": "breidbart",
+      "eve_before_key": 0.8535533905932737,
+      "eve_after_key": 0.8535533905932737,
+      "bob_disturbance": 0.25
+    },
+    {
+      "protocol": "raw_bb84",
+      "attack": "none",
+      "eve_before_key": 0.5,
+      "eve_after_key": 0.5,
+      "bob_disturbance": 0.0
+    },
+    {
+      "protocol": "raw_bb84",
+      "attack": "random_basis_intercept_resend",
+      "eve_before_key": 0.6767766952966369,
+      "eve_after_key": 0.75,
+      "bob_disturbance": 0.25
+    },
+    {
+      "protocol": "raw_bb84",
+      "attack": "swap_theft",
+      "eve_before_key": 0.8535533905932737,
+      "eve_after_key": 1.0,
+      "bob_disturbance": 0.484375
+    },
+    {
+      "protocol": "raw_bb84",
+      "attack": "z_intercept_resend",
+      "eve_before_key": 0.75,
+      "eve_after_key": 0.703125,
+      "bob_disturbance": 0.296875
+    }
+  ],
+  "persistence": [
+    {
+      "attack": "coherent_ancilla",
+      "eve_memory": "better",
+      "host_info": 0.0,
+      "eve_info": 0.09382443583732124,
+      "gap": 0.09382443571342057
+    },
+    {
+      "attack": "coherent_ancilla",
+      "eve_memory": "ideal",
+      "host_info": 0.0,
+      "eve_info": 0.15314846005551425,
+      "gap": 0.15314845993161352
+    },
+    {
+      "attack": "coherent_ancilla",
+      "eve_memory": "same_as_host",
+      "host_info": 0.0,
+      "eve_info": 1.2390066750356252e-10,
+      "gap": 0.0
+    },
+    {
+      "attack": "swap_theft",
+      "eve_memory": "better",
+      "host_info": 0.0,
+      "eve_info": 0.4125735810483898,
+      "gap": 0.4125735810483898
+    },
+    {
+      "attack": "swap_theft",
+      "eve_memory": "ideal",
+      "host_info": 0.0,
+      "eve_info": 0.7239677765026992,
+      "gap": 0.7239677765026992
+    },
+    {
+      "attack": "swap_theft",
+      "eve_memory": "same_as_host",
+      "host_info": 0.0,
+      "eve_info": 4.956026700142501e-10,
+      "gap": 4.956026700142501e-10
+    },
+    {
+      "attack": "z_intercept_resend",
+      "eve_memory": "better",
+      "host_info": 0.0,
+      "eve_info": 0.09382443583732124,
+      "gap": 0.09382443571342057
+    },
+    {
+      "attack": "z_intercept_resend",
+      "eve_memory": "ideal",
+      "host_info": 0.0,
+      "eve_info": 0.15314846005551425,
+      "gap": 0.15314845993161352
+    },
+    {
+      "attack": "z_intercept_resend",
+      "eve_memory": "same_as_host",
+      "host_info": 0.0,
+      "eve_info": 1.2390066750356252e-10,
+      "gap": 0.0
+    }
+  ],
+  "regime_counts": {
+    "unreadable_even_for_bob": 2590,
+    "self_erased": 630,
+    "readable_low_eve_info": 560
+  },
+  "secure_region": {
+    "n_points": 560,
+    "fraction": 0.14814814814814814,
+    "max_t_over_T2": 0.001,
+    "max_eta": 0.03
+  },
+  "neural": {
+    "run_id": "1e98fa53c88c3348",
+    "experiment": "neural_baseline",
+    "global_seed": 42,
+    "tags": "{'stage': 'neural', 'tier': '1'}",
+    "param_n_neurons": 500,
+    "param_duration_s": 0.5,
+    "param_stimulus_rate_hz": 100.0,
+    "param_n_hosts": 32,
+    "_row_index": 0,
+    "n_neurons": 500,
+    "duration_s": 0.5,
+    "total_spikes": 2535,
+    "mean_rate_hz": 10.14,
+    "n_active_neurons": 182,
+    "max_rate_hz": 148.0,
+    "host_spikes": 1551,
+    "backend": "runtime",
+    "seed": 272490720,
+    "n_synapses": 15138,
+    "dataset": "synthetic",
+    "graph_synthetic": true,
+    "model_transfer_caveat": "Neural dynamics are a Shiu-et-al.-style LIF transfer model applied to MaleCNS connectivity; this does not constitute experimental validation of MaleCNS neural dynamics.",
+    "n_hosts": 32,
+    "host_strategy": "random",
+    "propagation_depth": 2,
+    "layer_0_size": 32,
+    "layer_1_size": 431,
+    "layer_2_size": 37,
+    "wall_seconds": 1.496663253288716,
+    "peak_rss_mb": 173.8046875,
+    "n_edges": 15138,
+    "coupling_enabled": false
+  },
+  "hybrid": [
+    {
+      "gain": 0.0,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.0,
+      "condition": "strong",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.0,
+      "condition": "weak",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.001,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.001,
+      "condition": "strong",
+      "perturbed_non_host": 44.2,
+      "spike_change": 56.2
+    },
+    {
+      "gain": 0.001,
+      "condition": "weak",
+      "perturbed_non_host": 6.0,
+      "spike_change": 7.8
+    },
+    {
+      "gain": 0.01,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.01,
+      "condition": "strong",
+      "perturbed_non_host": 47.0,
+      "spike_change": 64.4
+    },
+    {
+      "gain": 0.01,
+      "condition": "weak",
+      "perturbed_non_host": 26.0,
+      "spike_change": 33.6
+    },
+    {
+      "gain": 0.1,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 0.1,
+      "condition": "strong",
+      "perturbed_non_host": 75.0,
+      "spike_change": 143.2
+    },
+    {
+      "gain": 0.1,
+      "condition": "weak",
+      "perturbed_non_host": 49.0,
+      "spike_change": 67.4
+    },
+    {
+      "gain": 1.0,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 1.0,
+      "condition": "strong",
+      "perturbed_non_host": 72.6,
+      "spike_change": 509.0
+    },
+    {
+      "gain": 1.0,
+      "condition": "weak",
+      "perturbed_non_host": 22.8,
+      "spike_change": 42.6
+    },
+    {
+      "gain": 10.0,
+      "condition": "none",
+      "perturbed_non_host": 0.0,
+      "spike_change": 0.0
+    },
+    {
+      "gain": 10.0,
+      "condition": "strong",
+      "perturbed_non_host": 53.6,
+      "spike_change": 909.4
+    },
+    {
+      "gain": 10.0,
+      "condition": "weak",
+      "perturbed_non_host": 18.0,
+      "spike_change": 42.0
+    }
+  ],
+  "ablation": [
+    {
+      "layers": "+ certified deletion (full C)",
+      "eve_memory": "better",
+      "secret_bits": 868.6076875809642,
+      "secret_without_delay": 695.9321012397666,
+      "usable": true
+    },
+    {
+      "layers": "+ certified deletion (full C)",
+      "eve_memory": "ideal",
+      "secret_bits": 695.9296401507365,
+      "secret_without_delay": 695.9296401507365,
+      "usable": true
+    },
+    {
+      "layers": "+ certified deletion (full C)",
+      "eve_memory": "same_as_host",
+      "secret_bits": 868.6095314382288,
+      "secret_without_delay": 696.1755866755641,
+      "usable": true
+    },
+    {
+      "layers": "+ delayed key release",
+      "eve_memory": "better",
+      "secret_bits": 868.6076875809642,
+      "secret_without_delay": 695.9321012397666,
+      "usable": true
+    },
+    {
+      "layers": "+ delayed key release",
+      "eve_memory": "ideal",
+      "secret_bits": 695.9296401507365,
+      "secret_without_delay": 695.9296401507365,
+      "usable": true
+    },
+    {
+      "layers": "+ delayed key release",
+      "eve_memory": "same_as_host",
+      "secret_bits": 868.6095314382288,
+      "secret_without_delay": 696.1755866755641,
+      "usable": true
+    },
+    {
+      "layers": "+ error correction",
+      "eve_memory": "better",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    },
+    {
+      "layers": "+ error correction",
+      "eve_memory": "ideal",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    },
+    {
+      "layers": "+ error correction",
+      "eve_memory": "same_as_host",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    },
+    {
+      "layers": "+ privacy amplification",
+      "eve_memory": "better",
+      "secret_bits": 695.9321012397666,
+      "secret_without_delay": 695.9321012397666,
+      "usable": true
+    },
+    {
+      "layers": "+ privacy amplification",
+      "eve_memory": "ideal",
+      "secret_bits": 695.9296401507365,
+      "secret_without_delay": 695.9296401507365,
+      "usable": true
+    },
+    {
+      "layers": "+ privacy amplification",
+      "eve_memory": "same_as_host",
+      "secret_bits": 696.1755866755641,
+      "secret_without_delay": 696.1755866755641,
+      "usable": true
+    },
+    {
+      "layers": "bare (protocol B)",
+      "eve_memory": "better",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    },
+    {
+      "layers": "bare (protocol B)",
+      "eve_memory": "ideal",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    },
+    {
+      "layers": "bare (protocol B)",
+      "eve_memory": "same_as_host",
+      "secret_bits": 0.0,
+      "secret_without_delay": 0.0,
+      "usable": false
+    }
+  ],
+  "theft_detected": {
+    "bob_ber": 0.52099609375,
+    "any_usable": false,
+    "n_configurations": 225
+  },
+  "deletion": {
+    "any_certifiable": false,
+    "n_check_available": 512,
+    "honest_accepted": true,
+    "cheating_accepted": false,
+    "decay_accepted": false,
+    "window_over_T2": 0.0
+  },
+  "requirements": [
+    {
+      "target": "optical_readout",
+      "max_ber": 0.001,
+      "required_T2": 0.0049949983316645,
+      "code_rate": 0.9885922422625388,
+      "orders_from_cryogenic": 2.4944153648512213,
+      "orders_from_nv_nuclear": -2.301464652492854
+    },
+    {
+      "target": "optical_readout",
+      "max_ber": 0.01,
+      "required_T2": 0.000494983164525,
+      "code_rate": 0.9192068641040888,
+      "orders_from_cryogenic": 1.490470445210588,
+      "orders_from_nv_nuclear": -3.3054095721334877
+    },
+    {
+      "target": "optical_readout",
+      "max_ber": 0.05,
+      "required_T2": 9.491221581029904e-05,
+      "code_rate": 0.7136030428840437,
+      "orders_from_cryogenic": 0.7732021298512393,
+      "orders_from_nv_nuclear": -4.022677887492836
+    },
+    {
+      "target": "optical_readout",
+      "max_ber": 0.1,
+      "required_T2": 4.481420117724551e-05,
+      "code_rate": 0.5310044064107188,
+      "orders_from_cryogenic": 0.4472956767797696,
+      "orders_from_nv_nuclear": -4.348584340564305
+    },
+    {
+      "target": "single_spike",
+      "max_ber": 0.001,
+      "required_T2": 0.4994998331664548,
+      "code_rate": 0.9885922422625388,
+      "orders_from_cryogenic": 4.494415364851221,
+      "orders_from_nv_nuclear": -0.3014646524928541
+    },
+    {
+      "target": "single_spike",
+      "max_ber": 0.01,
+      "required_T2": 0.0494983164525091,
+      "code_rate": 0.9192068641040888,
+      "orders_from_cryogenic": 3.490470445210588,
+      "orders_from_nv_nuclear": -1.3054095721334875
+    },
+    {
+      "target": "single_spike",
+      "max_ber": 0.05,
+      "required_T2": 0.0094912215810299,
+      "code_rate": 0.7136030428840437,
+      "orders_from_cryogenic": 2.7732021298512395,
+      "orders_from_nv_nuclear": -2.022677887492836
+    },
+    {
+      "target": "single_spike",
+      "max_ber": 0.1,
+      "required_T2": 0.0044814201177245,
+      "code_rate": 0.5310044064107188,
+      "orders_from_cryogenic": 2.4472956767797696,
+      "orders_from_nv_nuclear": -2.348584340564306
+    },
+    {
+      "target": "synaptic_integration",
+      "max_ber": 0.001,
+      "required_T2": 2.497499165832274,
+      "code_rate": 0.9885922422625388,
+      "orders_from_cryogenic": 5.19338536918724,
+      "orders_from_nv_nuclear": 0.3975053518431647
+    },
+    {
+      "target": "synaptic_integration",
+      "max_ber": 0.01,
+      "required_T2": 0.2474915822625455,
+      "code_rate": 0.9192068641040888,
+      "orders_from_cryogenic": 4.189440449546606,
+      "orders_from_nv_nuclear": -0.6064395677974687
+    },
+    {
+      "target": "synaptic_integration",
+      "max_ber": 0.05,
+      "required_T2": 0.0474561079051495,
+      "code_rate": 0.7136030428840437,
+      "orders_from_cryogenic": 3.4721721341872582,
+      "orders_from_nv_nuclear": -1.3237078831568172
+    },
+    {
+      "target": "synaptic_integration",
+      "max_ber": 0.1,
+      "required_T2": 0.0224071005886227,
+      "code_rate": 0.5310044064107188,
+      "orders_from_cryogenic": 3.1462656811157883,
+      "orders_from_nv_nuclear": -1.649614336228287
+    },
+    {
+      "target": "behavioural",
+      "max_ber": 0.001,
+      "required_T2": 49.94998331664548,
+      "code_rate": 0.9885922422625388,
+      "orders_from_cryogenic": 6.494415364851221,
+      "orders_from_nv_nuclear": 1.698535347507146
+    },
+    {
+      "target": "behavioural",
+      "max_ber": 0.01,
+      "required_T2": 4.949831645250911,
+      "code_rate": 0.9192068641040888,
+      "orders_from_cryogenic": 5.490470445210588,
+      "orders_from_nv_nuclear": 0.6945904278665125
+    },
+    {
+      "target": "behavioural",
+      "max_ber": 0.05,
+      "required_T2": 0.9491221581029904,
+      "code_rate": 0.7136030428840437,
+      "orders_from_cryogenic": 4.77320212985124,
+      "orders_from_nv_nuclear": -0.0226778874928359
+    },
+    {
+      "target": "behavioural",
+      "max_ber": 0.1,
+      "required_T2": 0.4481420117724551,
+      "code_rate": 0.5310044064107188,
+      "orders_from_cryogenic": 4.44729567677977,
+      "orders_from_nv_nuclear": -0.3485843405643056
+    }
+  ],
+  "error_correction_gain": {
+    "strict_ber": 0.001,
+    "tolerant_ber": 0.1,
+    "strict_window_over_T2": 0.0020020026706730793,
+    "tolerant_window_over_T2": 0.2231435513142097,
+    "storage_time_gain": 111.46016665361799,
+    "code_rate_at_tolerant": 0.5310044064107188,
+    "net_bit_seconds_gain": 59.18583963234421
+  },
+  "placement": [
+    {
+      "strategy": "betweenness",
+      "perturbed_non_host": 292.0,
+      "depth": 1.0,
+      "amplification": 9.125
+    },
+    {
+      "strategy": "high_in_degree",
+      "perturbed_non_host": 287.0,
+      "depth": 2.0,
+      "amplification": 8.96875
+    },
+    {
+      "strategy": "high_out_degree",
+      "perturbed_non_host": 282.0,
+      "depth": 1.0,
+      "amplification": 8.8125
+    },
+    {
+      "strategy": "high_out_strength",
+      "perturbed_non_host": 289.0,
+      "depth": 1.0,
+      "amplification": 9.03125
+    },
+    {
+      "strategy": "localized",
+      "perturbed_non_host": 160.0,
+      "depth": 2.0,
+      "amplification": 5.0
+    },
+    {
+      "strategy": "random",
+      "perturbed_non_host": 210.0,
+      "depth": 2.0,
+      "amplification": 6.5625
+    }
+  ],
+  "placement_controls": [
+    {
+      "variant": "degree_preserving",
+      "perturbed_non_host": 286.0
+    },
+    {
+      "variant": "host_location_shuffled",
+      "perturbed_non_host": 136.66666666666666
+    },
+    {
+      "variant": "measured",
+      "perturbed_non_host": 253.33333333333334
+    },
+    {
+      "variant": "weight_shuffled",
+      "perturbed_non_host": 234.33333333333334
+    }
+  ]
+}

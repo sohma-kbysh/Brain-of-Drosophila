@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioquantumfly"
+version = "0.0.1"
+description = "MaleCNS-based simulation of biologically hosted ephemeral quantum cryptography"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Sohma Kobayashi", email = "sohma_kobayashi@keio.jp" }]
+
+dependencies = [
+    # numerics / data
+    "numpy",
+    "scipy",
+    "pandas",
+    "pyarrow",
+    "networkx",
+    "matplotlib",
+    "sympy",
+    "cython",
+    "jinja2",
+    "packaging",
+    # domain
+    "qutip",
+    "brian2",
+    "neuprint-python",
+    # config / CLI
+    "pyyaml",
+    "pydantic",
+    "typer",
+    "rich",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.scripts]
+bioquantumfly = "bioquantumfly.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "network: requires internet access (deselected by default)",
+    "slow: long-running test",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,20 @@
+{
+  "schema": "operational-phase1-v2",
+  "seed": 20260912,
+  "rank_selection_rule": "paired_validation_hoeffding",
+  "rank_selection_alpha": 0.05,
+  "shot_levels": [200, 2000, 20000],
+  "alpha": 0.05,
+  "lif_dt_ms": [0.1, 0.05],
+  "lif_preparations": ["00", "01", "10", "11"],
+  "lif_futures": ["", "0", "1"],
+  "lif_bin_ms": 10,
+  "lif_readout_ms": 2,
+  "lif_rate_hz": 100,
+  "lif_recurrent_synapse_count": 200,
+  "lif_stimulus_drive_factor": 1.2,
+  "calibration_replicates": 100,
+  "shadow_visibilities": [1.0, 0.4],
+  "dt_probability_tolerance": 0.03,
+  "description": "Synthetic-only calibration: predictive sufficiency, known classical tomography, intentional shadow trap. No biological or computational-resource inference."
+}

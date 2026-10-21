@@ -1,0 +1,64 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# --- Secrets (NEVER commit tokens) ---
+.env
+.env.*
+!.env.example
+*.token
+*secret*
+credentials.json
+
+# --- Large / downloaded data ---
+# Raw MaleCNS downloads and neuPrint caches are local-only.
+# Ignore the CONTENTS, not the directory itself: git will not descend into an
+# ignored directory, so a "!dir/README.md" negation would never be reached.
+data/raw/*
+data/cache/*
+
+# Simulation output
+results/*
+
+# Brian2 C++ standalone build output / code generation cache
+output/
+brian2_cache/
+cython_extensions/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Keep ignored directories present on a fresh clone ---
+# The data lives outside git, but the directory and its note do not.
+!data/raw/README.md
+!data/cache/README.md
+!results/README.md
+!results/.gitkeep
+
+# Deliverables (spec section 33): the report and the figures are outputs of the
+# project, not scratch, so they are version-controlled even though the raw
+# per-run results directories are not.
+!results/initial_report.md
+!results/summary.json
+!results/figures/
+!results/figures/**
+
+# --- NOTE ---
+# Intentionally NOT ignored (must stay in version control):
+#   configs/            project configuration
+#   data/processed/     small, lightweight fixtures required by tests
+#   .env.example        template with no credentials in it

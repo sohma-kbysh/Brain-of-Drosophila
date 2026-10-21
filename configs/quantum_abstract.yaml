@@ -1,0 +1,95 @@
+name: quantum_abstract
+description: 'Tier 0: abstract finite-coherence memory and cryptography only. No connectome,
+  no Brian2.'
+runtime:
+  profile: development
+  scratch_dir: auto
+  use_shm_cache: false
+  shm_limit_gb: 16.0
+  seed: 42
+quantum:
+  n_carriers: 64
+  T2_seconds:
+  - 4.0e-09
+  - 1.0e-08
+  - 1.0e-07
+  - 1.0e-06
+  - 1.0e-05
+  - 0.0001
+  - 0.001
+  t1_over_t2: 1.0
+  t_over_T2_grid:
+  - 0.0
+  - 0.1
+  - 0.25
+  - 0.5
+  - 1.0
+  - 2.0
+  - 3.0
+  - 5.0
+  - 10.0
+  physical_regime: sweep
+crypto:
+  protocol: masked_conjugate
+  attacks:
+  - none
+  - z_intercept_resend
+  - random_basis_intercept_resend
+  - breidbart
+  - swap_theft
+  attack_strengths:
+  - 0.0
+  - 0.1
+  - 0.25
+  - 0.5
+  - 0.75
+  - 0.9
+  - 1.0
+  t_attack_over_T2:
+  - 0.1
+  eve_memory: ideal
+  eve_memory_advantage: 100.0
+connectome:
+  source: synthetic
+  dataset: male-cns:v1.0
+  server: https://neuprint.janelia.org
+  seed_type: null
+  hops: 2
+  min_weight: 5
+  max_neurons: 20000
+  processed_dir: data/processed/male_cns
+  synthetic_n_neurons: 500
+  nt_confidence_threshold: 0.5
+  nt_low_confidence: excitatory
+host_selection:
+  mode: engineered
+  strategy: random
+  n_hosts: 32
+  curated_path: null
+  seed: 42
+neural:
+  enabled: false
+  duration_s: 0.5
+  backend: runtime
+  stimulus_rate_hz: 100.0
+  stimulate_hosts: true
+  record_all_spikes: false
+  record_voltage: false
+  downstream_hops: 3
+coupling:
+  enabled: false
+  mode: storage_only
+  speculative_coupling_gain: 0.0
+  gain_sweep:
+  - 0.0
+  - 0.001
+  - 0.01
+  - 0.1
+  - 1.0
+  - 10.0
+  readout_axis: z
+feasibility:
+  max_bob_ber: 0.001
+  max_eve_info: 0.01
+  min_detection_probability: 0.95
+results_dir: results

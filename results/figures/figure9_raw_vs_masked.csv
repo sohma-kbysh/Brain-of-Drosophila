@@ -1,0 +1,11 @@
+protocol,attack,eve_info_before_key
+masked_conjugate,breidbart,0.0
+masked_conjugate,none,0.0
+masked_conjugate,random_basis_intercept_resend,0.0
+masked_conjugate,swap_theft,0.0
+masked_conjugate,z_intercept_resend,0.0
+raw_bb84,breidbart,0.3991239633071438
+raw_bb84,none,0.0
+raw_bb84,random_basis_intercept_resend,0.0921476993980714
+raw_bb84,swap_theft,0.3991239633071438
+raw_bb84,z_intercept_resend,0.1887218755408671

@@ -1,0 +1,53 @@
+# BioQuantumFly conda environment.
+#
+# Generated with:
+#   conda env export -p ~/conda-envs/bioquantumfly --from-history
+# then extended by hand with the pip layer (see note below) and with the
+# machine-specific `prefix:` key removed so this file is portable.
+#
+# Recreate with an explicit PATH prefix (NOT a named env, so that it lands
+# under /home and never on the nearly-full root filesystem):
+#
+#   export CONDA_PKGS_DIRS=$HOME/.conda/pkgs
+#   conda env create -p ~/conda-envs/bioquantumfly -f environment.yml
+#
+# For a bit-for-bit reproduction of the Python layer use requirements-lock.txt:
+#   python -m pip install -r requirements-lock.txt
+#
+# NOTE: conda provides only the interpreter and pip; every scientific package
+# is installed via pip. This keeps one resolver in charge of the stack and
+# avoids conda/pip ABI mixing for numpy.
+
+name: bioquantumfly
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # numerics / data
+      - numpy
+      - scipy
+      - pandas
+      - pyarrow
+      - networkx
+      - matplotlib
+      - sympy
+      - cython
+      - jinja2
+      - packaging
+      # domain: open quantum systems, spiking neurons, connectome access
+      - qutip
+      - brian2
+      - neuprint-python
+      # config / CLI
+      - pyyaml
+      - pydantic
+      - typer
+      - rich
+      - tqdm
+      # testing
+      - pytest
+      - pytest-cov

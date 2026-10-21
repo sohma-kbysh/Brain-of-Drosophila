@@ -1,0 +1,116 @@
+BioQuantumFly - environment verification report
+Generated: 2026-09-09T17:37:14+09:00
+Host: hayate
+========================================================================
+
+--- System ---
+Linux hayate 6.8.0-136-generic #136-Ubuntu SMP PREEMPT_DYNAMIC Wed Jul  1 21:53:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+conda base  : /opt/miniconda
+conda       : conda 25.5.1
+git         : git version 2.43.0
+gcc         : gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+g++         : g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+logical CPUs: 384
+
+--- Import / version smoke test (fails loudly on any import error) ---
+python              3.12.14
+executable          /home/sohma/conda-envs/bioquantumfly/bin/python
+numpy               2.5.3
+scipy               1.18.1
+pandas              3.0.5
+pyarrow             25.0.1
+networkx            3.6.1
+matplotlib          3.11.1
+qutip               5.3.1
+brian2              2.10.1
+neuprint            0.6.3
+pyyaml              6.0.3
+pydantic            2.13.5
+typer               0.27.2
+sympy               1.14.0
+cython              3.1.3
+rich                15.0.0
+tqdm                4.70.0
+pytest              9.1.1
+
+All required imports succeeded.
+
+--- Filesystem ---
+project dir : /home/sohma/aqua/Brain-of-Drosophila
+203.178.162.135:/volume1/only14TB/home   14T  3.4T   11T  24% /home
+conda env   : /home/sohma/conda-envs/bioquantumfly
+203.178.162.135:/volume1/only14TB/home   14T  3.4T   11T  24% /home
+TMPDIR      : /home/sohma/aqua/Brain-of-Drosophila/data/cache/tmp
+
+--- Full validation (scripts/check_environment.py) ---
+========================================================================
+BioQuantumFly environment validation
+========================================================================
+
+=== 1. Python interpreter ===
+  version    : 3.12.14
+  executable : /home/sohma/conda-envs/bioquantumfly/bin/python
+  [ OK ]  Python 3.12.x as required
+  [ OK ]  running from project env: /home/sohma/conda-envs/bioquantumfly
+
+=== 2. Core imports ===
+  [ OK ]  numpy        2.5.3
+  [ OK ]  scipy        1.18.1
+  [ OK ]  pandas       3.0.5
+  [ OK ]  pyarrow      25.0.1
+  [ OK ]  networkx     3.6.1
+  [ OK ]  matplotlib   3.11.1
+  [ OK ]  sympy        1.14.0
+  [ OK ]  Cython       3.1.3
+  [ OK ]  jinja2       3.1.6
+  [ OK ]  qutip        5.3.1
+  [ OK ]  brian2       2.10.1
+  [ OK ]  neuprint     0.6.3
+  [ OK ]  yaml         6.0.3
+  [ OK ]  pydantic     2.13.5
+  [ OK ]  typer        0.27.2
+  [ OK ]  rich         15.0.0
+  [ OK ]  tqdm         4.70.0
+  [ OK ]  pytest       9.1.1
+
+=== 3. QuTiP open-quantum-system smoke test ===
+  [ OK ]  mesolve completed, trace=1.000000000000, Hermitian, finite, PSD
+  QuTiP smoke test: PASS
+
+=== 4. Brian2 simulation smoke test ===
+  [ OK ]  LIF decay v(20ms)=0.13533528 (analytic 0.13533528)
+  Brian2 smoke test: PASS
+
+=== 5. C / C++ compiler availability ===
+  [ OK ]  gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0  (/usr/bin/gcc)
+  [ OK ]  g++: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0  (/usr/bin/g++)
+  [ OK ]  Brian2 reports C++ compiler: unix
+  [ OK ]  Cython available (Brian2 'cython' codegen target usable)
+  NOTE: C++ standalone mode is intentionally NOT enabled at this stage.
+
+=== 6. Filesystem placement ===
+  [ OK ]  project    /home/sohma/aqua/Brain-of-Drosophila  -> mount /home  free 10,869 GiB / 14,288 GiB
+  [ OK ]  conda env  /home/sohma/conda-envs/bioquantumfly  -> mount /home  free 10,869 GiB / 14,288 GiB
+  [ OK ]  TMPDIR=/home/sohma/aqua/Brain-of-Drosophila/data/cache/tmp -> mount /home
+
+=== 7. CPU thread policy ===
+  logical CPUs available: 384
+  [ OK ]  OMP_NUM_THREADS=16
+  [ OK ]  OPENBLAS_NUM_THREADS=16
+  [ OK ]  MKL_NUM_THREADS=16
+
+=== 8. neuPrint ===
+  [ OK ]  neuprint-python 0.6.3 importable (Client available)
+  [WARN]  NEUPRINT_TOKEN is not set. This is fine for setup and for the test suite; export it before fetching connectome data:
+            export NEUPRINT_TOKEN="<your token>"
+
+========================================================================
+RESULT: PASSED  (0 errors, 1 warning(s))
+  ! NEUPRINT_TOKEN is not set. This is fine for setup and for the test suite; export it before fetching connectome data:
+
+Environment ready for BioQuantumFly implementation.
+
+--- Test suite ---
+..............................s........                                  [100%]
+38 passed, 1 skipped in 2.23s
